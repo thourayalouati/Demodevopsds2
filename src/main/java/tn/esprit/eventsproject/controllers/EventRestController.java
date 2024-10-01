@@ -40,6 +40,7 @@ public class EventRestController {
     }
     @GetMapping("/getLogs/{d1}/{d2}")
     public List<Logistics> getLogistiquesDates (@PathVariable("d1") LocalDate date_debut, @PathVariable("d2") LocalDate date_fin){
+        log.info("Display logistics");
         return eventServices.getLogisticsDates(date_debut,date_fin);
     }
 }
