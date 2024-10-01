@@ -30,6 +30,8 @@ public class EventRestController {
     }
     @PostMapping("/addEvent")
     public Event addEvent(@RequestBody Event event){
+
+        log.info("Add Event Method");
         return eventServices.addAffectEvenParticipant(event);
     }
     @PutMapping("/addAffectLog/{description}")
